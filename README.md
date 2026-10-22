@@ -23,7 +23,7 @@ npm test
 ## Публикация на GitHub Pages
 
 1. Создайте публичный репозиторий `FeklaMalko/who-is-the-boss` и загрузите файлы проекта в ветку `main`.
-2. При первом workflow GitHub Actions включает Pages автоматически; если настройки репозитория запрещают это, выберите GitHub Actions как источник в Settings → Pages.
+2. В настройках репозитория откройте Settings → Pages и выберите GitHub Actions в поле Build and deployment → Source.
 3. Workflow `.github/workflows/pages.yml` запускает проверки и публикует корень проекта в Pages при push в `main`.
 4. После успешного workflow сайт будет доступен по адресу `https://feklamalko.github.io/who-is-the-boss/`.
 
