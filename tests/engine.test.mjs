@@ -41,6 +41,15 @@ test('all zodiac signs resolve at their date boundaries', () => {
   assert.match(getZodiacResult('Дева','perfectionist'),/Перфекционист с огнемётом/);
 });
 
+test('every zodiac sign has a distinct combined reading for every archetype', () => {
+  const signs = ['Овен','Телец','Близнецы','Рак','Лев','Дева','Весы','Скорпион','Стрелец','Козерог','Водолей','Рыбы'];
+  for (const sign of signs) for (const archetype of archetypes) {
+    const reading = getZodiacResult(sign, archetype.id);
+    assert.ok(reading.includes(`Сочетание «${sign} + ${archetype.title}»`));
+    assert.ok(!reading.includes('undefined'));
+  }
+});
+
 test('partial, invalid and repeated answers never produce an undefined archetype', () => {
   for (const answers of [[],[null],[99],Array(12).fill(0),Array(12).fill(null)]) {
     assert.ok(archetypes.some(a => a.id === scoreAnswers(answers).archetype.id));
