@@ -1,4 +1,4 @@
-import { archetypes, questions, zodiacSign, scoreAnswers, getZodiacResult } from './engine.js';
+import { archetypes, questions, zodiacSign, scoreAnswers, getZodiacResult } from './engine.js?v=perfectionist-copy-1';
 const $ = (s) => document.querySelector(s);
 const screens = ['home','date','quiz','result'].map(id => $(`#screen-${id}`));
 let state = { date:'', answers:Array(questions.length).fill(null), index:0, locked:false, result:null, sign:null };
