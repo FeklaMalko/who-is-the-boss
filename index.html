@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f1e8">
+  <meta name="description" content="Сатирический тест для тех, кто называет управленческий бардак системой. 12 вопросов, 6 архетипов и астрологический бонус.">
+  <title>Кто тут, блядь, главный?</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="topbar"><a class="brand" href="#top" aria-label="К началу теста">КТБ<span>?</span></a><span class="top-note">НЕ ПСИХОДИАГНОСТИКА / 2026</span><span class="top-index">ТЕСТ № 01</span></header>
+  <main id="main">
+    <section class="screen hero is-active" id="screen-home" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-copy"><p class="eyebrow"><i></i> УПРАВЛЕНИЕ / САМООЦЕНКА</p><h1 id="hero-title">КТО ТУТ,<br><em>БЛЯДЬ,</em><br>ГЛАВНЫЙ<span class="qmark">?</span></h1><p class="hero-sub">Узнай, какой управленческий бардак ты называешь своей системой.</p><button class="button button-dark" id="start-btn">РАЗОБРАТЬ МОЙ БАРДАК <span aria-hidden="true">↗</span></button><div class="hero-meta"><span>12 ВОПРОСОВ</span><span>≈ 3 МИНУТЫ</span><span>6 ТИПОВ</span></div></div>
+        <div class="hero-art" aria-hidden="true"><div class="art-stamp">НЕ<br>НУЖНО<br>СОВЕТОВ<br>СОВЕТА</div><div class="art-circle"></div><div class="art-square"></div><div class="art-star">✳</div><div class="art-arrow">↘</div><div class="art-caption">управленческая<br>астрология</div><div class="art-cross">×</div><div class="art-number">12</div></div>
+      </div><div class="hero-bottom"><span>ЧЕСТНОСТЬ — ЕДИНСТВЕННАЯ ТЕХНОЛОГИЯ</span><span>ПРОКРУТИ ВНИЗ ↓</span></div>
+    </section>
+    <section class="screen date-screen" id="screen-date" aria-labelledby="date-title" hidden>
+      <div class="section-kicker"><span>ШАГ 01 / 02</span><span>ЗНАКИ НЕ ВЛИЯЮТ НА БАЛЛЫ</span></div>
+      <div class="date-layout"><div><p class="eyebrow">АСТРОЛОГИЧЕСКИЙ БОНУС</p><h2 id="date-title">КОГДА ТЫ<br>РОДИЛСЯ<span>?</span></h2><p class="lead">Дата нужна только для сатирического космического комментария. Без времени, места и ретроградных оправданий.</p><p class="fineprint">Характеристики знаков — развлекательная выдумка без научно подтверждённой диагностической ценности. Дата не сохраняется и не попадёт в карточку.</p></div><div class="date-control"><label for="birth-date">ТВОЯ ДАТА РОЖДЕНИЯ</label><input id="birth-date" type="date" autocomplete="bday"><p id="date-error" class="field-error" role="alert"></p><div class="date-buttons"><button class="button button-blue" id="date-continue">ПОЕХАЛИ <span aria-hidden="true">↗</span></button><button class="text-button" id="date-skip">ПРОПУСТИТЬ АСТРОЛОГИЮ →</button></div><button class="back-link" id="date-back">← НАЗАД</button></div></div>
+    </section>
+    <section class="screen quiz-screen" id="screen-quiz" aria-labelledby="question-title" hidden>
+      <div class="quiz-head"><div class="section-kicker"><span>ИНТЕРРОГАЦИЯ / <b id="q-number">01</b></span><button class="back-link" id="quiz-back">← ПРЕДЫДУЩИЙ</button></div><div class="progress-track" role="progressbar" aria-label="Прогресс теста" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0"><span id="progress-fill"></span></div></div>
+      <div class="question-layout"><div class="question-side"><span class="big-q" id="big-number">01</span><span class="side-rule"></span><span class="side-label">ОТВЕЧАЙ<br>КАК ЕСТЬ</span></div><div class="question-main"><p class="eyebrow">СИТУАЦИЯ <span id="q-counter">01 / 12</span></p><h2 id="question-title" tabindex="-1"></h2><div class="answers" id="answers" role="group" aria-labelledby="question-title"></div><p class="quiz-hint">ВЫБЕРИ ВАРИАНТ — ДАЛЬШЕ ПЕРЕЙДЁМ САМИ</p></div></div>
+    </section>
+    <section class="screen result-screen" id="screen-result" aria-labelledby="result-title" hidden>
+      <div class="result-top"><span>ДИАГНОЗ: УПРАВЛЕНЧЕСКИЙ (НЕНАУЧНЫЙ)</span><span id="result-constellation">✳ ТЕСТ № 01</span></div>
+      <div class="result-hero"><div class="result-mark" aria-hidden="true"><span>ВОТ</span><b>ТАК</b><i>?</i></div><div><p class="eyebrow">ТВОЯ СИСТЕМА ВЫГЛЯДИТ КАК</p><h2 id="result-title"></h2><p class="result-short" id="result-short"></p></div></div>
+      <div class="result-body"><article class="roast-block"><p class="eyebrow">КРАТКИЙ РАЗНОС</p><p id="result-roast"></p></article><div class="result-columns"><article><h3>ЧТО У ТЕБЯ ПОЛУЧАЕТСЯ</h3><p id="result-strengths"></p></article><article><h3>ГДЕ НАЧИНАЕТСЯ ПИЗДЕЦ</h3><p id="result-risks"></p></article></div><article class="tips-block"><h3>ТРИ ШАГА К МЕНЬШЕМУ БАРДАКУ</h3><ol id="result-tips"></ol></article><article class="astro-block" id="astro-block" hidden><p class="eyebrow">КОСМОС ТАК СКАЗАЛ <span id="zodiac-name"></span></p><p id="astro-copy"></p><small>Астрология здесь исключительно ради шутки и не является диагностическим инструментом.</small></article>
+      <div class="share-area"><div class="share-title"><span>УПАКУЙ СВОЙ ХАОС</span><span>БЕЗ ДАТЫ РОЖДЕНИЯ</span></div><canvas id="share-card" width="1200" height="630" aria-label="Карточка результата"></canvas><div class="share-actions"><button class="button button-dark" id="share-btn">ПОДЕЛИТЬСЯ <span aria-hidden="true">↗</span></button><button class="button button-outline" id="download-btn">СКАЧАТЬ PNG ↓</button><button class="text-button" id="copy-btn">СКОПИРОВАТЬ ТЕКСТ</button></div><p class="fineprint" id="share-status" aria-live="polite"></p></div>
+      <button class="button button-blue retake-btn" id="retake-btn">ПРОЙТИ ЕЩЁ РАЗ ↻</button><p class="disclaimer">Авторский развлекательный тест, не валидированный психологический инструмент. Все выводы можно оспорить, желательно после отдыха.</p></div>
+    </section>
+  </main>
+  <footer class="site-footer"><span>КТБ? / ТЕСТ ДЛЯ ЛЮДЕЙ С КАЛЕНДАРЁМ НА 14 СЛОЁВ</span><span>СДЕЛАНО БЕЗ СБОРА ДАННЫХ ✳</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="app.js"></script>
+</body></html>
